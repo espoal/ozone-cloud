@@ -1,0 +1,35 @@
+{
+  "name": "@espoal/ozone-cloud",
+  "scripts": {
+    "dev": "",
+    "dev:start": "",
+    "dev:build": "",
+    "dev:clean": "",
+    "lint": "",
+    "lint:start": "",
+    "lint:check": "biome check --apply-unsafe svcs/",
+    "lint:format": "biome format --write svcs/",
+    "lint:fix": "yarn lint:check && yarn lint:format",
+    "test": "",
+    "test:watch": "",
+    "test:unit": "",
+    "test:e2e": "",
+    "test:coverage": "",
+    "prod": "",
+    "prod:build": ""
+  },
+  "workspaces": [
+    "dist/*",
+    "libs/*",
+    "pkgs/*",
+    "svcs/*",
+    "utils/*"
+  ],
+  "type": "module",
+  "packageManager": "yarn@4.0.0-rc.53",
+  "devDependencies": {
+    "@biomejs/biome": "1.2.2",
+    "@libs/build": "workspace:*",
+    "typescript": "5.2.2"
+  }
+}

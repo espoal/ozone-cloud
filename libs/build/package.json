@@ -1,0 +1,9 @@
+{
+  "name": "@libs/build",
+  "main": "index.mjs",
+  "type": "module",
+  "packageManager": "yarn@4.0.0-rc.53",
+  "dependencies": {
+    "esbuild": "0.19.5"
+  }
+}
