@@ -2,13 +2,15 @@
   "name": "@espoal/ozone-cloud",
   "scripts": {
     "dev": "",
-    "dev:start": "",
-    "dev:build": "",
-    "dev:clean": "",
+    "dev:start": "docker compose -f infra/infra.compose.yml -f infra/build.compose.yml up --build",
+    "dev:infra": "docker compose -f infra/infra.compose.yml up --build",
+    "dev:watch": "docker compose -f infra/build.compose.yml up --build",
+    "dev:test": "docker compose -f infra/test.compose.yml up --build",
+    "dev:clean": "docker compose -f infra/infra.compose.yml -f infra/build.compose.yml down --volumes --remove-orphans",
     "lint": "",
     "lint:start": "",
-    "lint:check": "biome check --apply-unsafe svcs/",
-    "lint:format": "biome format --write svcs/",
+    "lint:check": "biome check --apply-unsafe svcs/ libs/",
+    "lint:format": "biome format --write svcs/ libs/",
     "lint:fix": "yarn lint:check && yarn lint:format",
     "test": "",
     "test:watch": "",
@@ -25,11 +27,12 @@
     "svcs/*",
     "utils/*"
   ],
-  "type": "module",
-  "packageManager": "yarn@4.0.0-rc.53",
   "devDependencies": {
     "@biomejs/biome": "1.2.2",
     "@libs/build": "workspace:*",
+    "@types/node": "20.8.6",
     "typescript": "5.2.2"
-  }
+  },
+  "type": "module",
+  "packageManager": "yarn@4.0.0"
 }

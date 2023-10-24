@@ -1,0 +1,7 @@
+{
+  "name": "pong",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs"
+  }
+}

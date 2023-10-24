@@ -1,4 +1,4 @@
 {
-  "name": "@svcs/echo",
+  "name": "@svcs/pong",
   "packageManager": "yarn@4.0.0"
 }

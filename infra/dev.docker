@@ -1,0 +1,8 @@
+FROM node:21.0-alpine3.17
+
+RUN corepack enable
+RUN corepack prepare yarn@4 --activate
+
+WORKDIR /home/node/app
+USER node
+

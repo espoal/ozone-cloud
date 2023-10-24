@@ -1,0 +1,7 @@
+{
+  "name": "echo",
+  "main": "index.mjs",
+  "scripts": {
+    "start": "node index.mjs"
+  }
+}

@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+
+  echo:
+    build: ../svcs/echo
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../svcs/echo/src:/home/app/src
+
+  pong:
+    build: ../svcs/pong
+    restart: always
+    ports:
+      - "8081:8080"
+    volumes:
+      - ../svcs/pong/src:/home/app/src
+
+  mongodb:
+    image: "mongo:${MONGO_VERSION}"
+    restart: always
+    ports:
+      - "${MONGO_PORT}:27017"
+    volumes:
+      - mongodb_volume:/data/db
+    command: mongod --quiet --logpath /dev/null
+
+volumes:
+  mongodb_volume:
