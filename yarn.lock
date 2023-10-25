@@ -76,6 +76,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@dist/event-generator@workspace:dist/event-generator":
+  version: 0.0.0-use.local
+  resolution: "@dist/event-generator@workspace:dist/event-generator"
+  languageName: unknown
+  linkType: soft
+
 "@esbuild/android-arm64@npm:0.19.5":
   version: 0.19.5
   resolution: "@esbuild/android-arm64@npm:0.19.5"
